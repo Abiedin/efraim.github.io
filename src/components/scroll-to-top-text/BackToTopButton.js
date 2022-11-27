@@ -1,12 +1,12 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-
+import './button-to-up.scss';
 const BackToTopButton = () => {
   const [backToTopButton, setBackToTopButton] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 500) {
         setBackToTopButton(true);
       } else {
         setBackToTopButton(false);
@@ -24,19 +24,9 @@ const BackToTopButton = () => {
   return (
     <div calssName="button-to-top">
       {backToTopButton && (
-        <button
-          style={{
-            position: 'fixed',
-            bottom: '50px',
-            right: '50px',
-            height: '50px',
-            width: '50px',
-            fontSize: '50px',
-          }}
-           onClick={scrollUp}
-        >
+        <div  className="button-up" onClick={scrollUp}>
           ^
-        </button>
+        </div>
       )}
     </div>
   );

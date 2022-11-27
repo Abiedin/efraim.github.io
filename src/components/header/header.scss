@@ -50,7 +50,12 @@
 }
 
 .header__date-today-is {
-  margin: 0 0 0 15px
+  border: 1px solid red;
+}
+
+.header__date-today-ru {
+  margin: 0 15px 0 0;
+  border: 1px solid red;
 }
 
 .header__logo{
@@ -68,3 +73,33 @@
   transition-duration: 0.4s;
 }
 
+@media screen and (max-width: 1055px) {
+  .header__logo {
+    font-size: 40px;
+  }
+
+  .header__date {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header__logo {
+    font-size: 35px;
+  }
+  .header__box {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+ .header__logo {
+  display: none;
+ }
+
+ .header__date {
+  margin: 0;
+  width: 100px;
+ }
+}
