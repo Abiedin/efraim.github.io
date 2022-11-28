@@ -75,8 +75,12 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   .book {
     margin: 0 25px;
+  }
+
+  .start__text {
+    text-align: center;
   }
 }

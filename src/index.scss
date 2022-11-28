@@ -26,3 +26,10 @@ body {
     margin: 0 0 40px 0;
     border: 1px solid rgb(25, 0, 255);
 }
+
+@media screen and (max-width: 350px) {
+    .main {
+        width: 100%;
+    }
+
+  }

@@ -4,6 +4,7 @@ import moment from 'moment';
 import 'moment/locale/ru';
 import hebrewDate from 'hebrew-date';
 import Month from './Month';
+import { TelegramLoginButton } from "react-social-login-buttons";
 
 const Header = () => {
   const date = hebrewDate(new Date());
@@ -24,6 +25,7 @@ const Header = () => {
           <div className="header__israel">House of Israel</div>
           <div className="header__ten">Return of the 10 tribes</div>
         </div>
+        <TelegramLoginButton onClick={() => alert("Hello")} />
       </div>
     </div>
   );

@@ -73,7 +73,7 @@
     transition-duration: 0.4s;
 }
 
-@media screen and (max-width: 1055px) {
+@media screen and (max-width: 1080px) {
     .header__logo {
         font-size: 40px;
     }
@@ -102,6 +102,23 @@
     .header__date {
         display: inline;
         margin: 0;
-        width: 100px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .header__box {
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .header__date {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0 5px 0;
+    }
+
+    .header__home {
+        margin: 5px 0 10px 0;
     }
 }

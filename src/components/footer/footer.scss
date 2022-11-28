@@ -16,4 +16,21 @@
 
 .footer__nav {
   margin: 0px 10px;
+  transition-duration:  0.4s;
+}
+
+.footer__nav:hover {
+  color: rgb(219, 224, 226);
+}
+
+@media screen and (max-width: 500px) {
+  .footer__link {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__nav {
+    margin: 6px 10px;
+  }
 }
