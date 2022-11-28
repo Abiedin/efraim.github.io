@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { objBereshit } from '../../object/bereshit/obj-bereshit';
 import './chapter-link.scss';
+import BackToTopButton from '../scroll-to-top-text/BackToUp';
 
 const LinksChapter = ({ active, setModalActive }) => {
   const arr = objBereshit?.map((items) => items.id_chapter);
@@ -13,6 +14,13 @@ const LinksChapter = ({ active, setModalActive }) => {
     }
   }
 
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'auto', //smooth
+    });
+  };
+
   return (
     <div className="chapter-link">
       {result?.map((item) => (
@@ -20,6 +28,7 @@ const LinksChapter = ({ active, setModalActive }) => {
           to={`/tora/beresheet/${item}`}
           key={item}
           className={active ? 'chapter-link-item active' : 'chapter-link-item'}
+          onClick={scrollUp}
         >
           <div
             onClick={() => {

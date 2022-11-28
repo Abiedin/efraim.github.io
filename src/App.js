@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter  } from 'react-router-dom';
 import { Navigation } from './navigation/Navigation';
 import Tora from './components/Tora';
 import Shmot from './components/books-tora/Shmot';
@@ -10,7 +10,7 @@ import Bemitbar from './components/books-tora/Bemitbar';
 import Dvarim from './components/books-tora/Dvarim';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
-import BackToTopButton from './components/scroll-to-top-text/BackToTopButton'
+import BackToUp from './components/scroll-to-top-text/BackToUp'
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
             <Route path="/tanah" element={<Tanah />} />
           </Routes>
         </div>
-        <BackToTopButton />
+        <BackToUp />
         <Footer />
       </div>
     </BrowserRouter>

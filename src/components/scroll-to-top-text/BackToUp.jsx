@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './button-to-up.scss';
 
-const BackToTopButton = () => {
-  const [backToTopButton, setBackToTopButton] = useState(false);
+const BackToUp = () => {
+  const [back, setBackToTopButton] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -23,7 +23,7 @@ const BackToTopButton = () => {
 
   return (
     <div calssName="button-to-top">
-      {backToTopButton && (
+      {back && (
         <div  className="button-up" onClick={scrollUp}>
           ^
         </div>
@@ -32,4 +32,4 @@ const BackToTopButton = () => {
   );
 };
 
-export default BackToTopButton;
+export default BackToUp;

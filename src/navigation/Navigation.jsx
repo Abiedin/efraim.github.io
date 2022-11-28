@@ -10,7 +10,7 @@ export const Navigation = () => {
   }
 
   return (
-    <nav className="nav__all">
+    <nav className="nav__book">
       <NavLink style={NavLinkStyles} to='/tora' className='nav__item'>
         ТОРА
       </NavLink>   

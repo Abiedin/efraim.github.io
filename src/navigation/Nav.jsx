@@ -3,33 +3,34 @@ import './nav.scss';
 
 const Nav = () => {
   return (
-    <div className="">
+    <div>
       <nav className="nav__all">
         <NavLink to='/tora' className='nav__item'>
-          <button className="btn__link">
+          <div className="btn__link">
             БЕРЕШИТ
-          </button>
+          </div>
         </NavLink>   
         <NavLink to='/tora/schmot' className='nav__item'>
-          <button className="btn__link">
+          <div className="btn__link">
             ШМОТ
-          </button>
+          </div>
         </NavLink>
         <NavLink to='/tora/vaikra' className='nav__item'>
-          <button className="btn__link">
+          <div className="btn__link">
             ВАИКРА
-          </button>
+          </div>
         </NavLink>
         <NavLink to='/tora/bemitbar' className='nav__item'>
-          <button className="btn__link">
+          <div className="btn__link">
             БЕНИТБАР
-          </button>
+          </div>
         </NavLink>
         <NavLink to='/tora/dvarim' className='nav__item'>
-          <button className="btn__link">
+          <div className="btn__link">
             ДВАРИМ
-          </button>
+          </div>
         </NavLink>
+        
       </nav>      
     </div>
   );
