@@ -20,7 +20,7 @@ header {
     flex: content;
     justify-content: space-between;
     margin: 10px 20px;
-    max-width: 60%;
+    max-width: 55%;
 }
 
 .header__link {
@@ -36,8 +36,6 @@ header {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
-
 .header__date {
     display: flex;
     flex: content;
@@ -45,6 +43,7 @@ header {
     margin: 0 20px;
     max-width: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition-duration: 0.4s;
 }
 
 .header__date-today-ru {
@@ -60,18 +59,16 @@ header {
 
 .header__logo:hover {
     color: #a1cdec;
-    transition-duration: 0.4s;
 }
 
 .header__israel {
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 900;
-    margin: 5px 0;
 }
 
 .header__ten {
     font-weight: 500;
-    font-size: 25px;
+    font-size: 23px;
     color: rgb(252, 255, 101);
 }
 
@@ -93,7 +90,7 @@ header {
     }
 
     .header__box {
-       max-width: 70%;
+       max-width: 65%;
     }
 
     .header__soc {

@@ -1,22 +1,12 @@
-import { NavLink } from "react-router-dom";
-import './nav.scss';
+import './Links.scss';
+import NavTora  from './NavTora';
+import NavTanah from './NavTanah';
 
 export const Navigation = () => {
-  const NavLinkStyles = ({ isActive }) => {
-    return{
-      fontWeight: isActive ? 'bold' : 'normal',
-      textDecoration: isActive ? 'none' : 'underline',
-    }
-  }
-
   return (
-    <nav className="nav__book">
-      <NavLink style={NavLinkStyles} to='/tora' className='nav__item'>
-        ТОРА
-      </NavLink>   
-      <NavLink  style={NavLinkStyles} to='/tanah' className='nav__item'> 
-        ТАНАХ
-      </NavLink>
-    </nav>
-  )
-}
+      <div className="nav__book">
+        <NavTora />
+        <NavTanah />
+      </div>
+  );
+};

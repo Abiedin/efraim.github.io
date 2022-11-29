@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import '../tora.scss';
 import { objBereshit } from '../../object/bereshit/obj-bereshit';  
 import LinksChapter from '../links-chapter/LinksChapter';
-import Nav from '../../navigation/Nav'
 
 const Beresheet = () => {
   let count = 1;
@@ -12,7 +11,6 @@ const Beresheet = () => {
 
   return (
     <div className="book">
-      <Nav />
       <LinksChapter />
       <div className="book__name">{arr[0].name} | {arr[0].chapter} | ГЛАВА {arr[0].id_chapter}</div>
 
