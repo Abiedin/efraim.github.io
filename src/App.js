@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, HashRouter  } from 'react-router-dom';
+import { HashRouter as BrowserRouter, Routes, Route   } from 'react-router-dom';
 import { Navigation } from './navigation/Navigation';
 import Tora from './components/Tora';
 import Shmot from './components/books-tora/Shmot';
