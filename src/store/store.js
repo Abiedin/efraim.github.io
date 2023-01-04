@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import todoSlice from "../slices/todoSlice"
+import currencySlice from "../slices/currencySlice"
 
 export const store = configureStore({
   reducer: {
-    todo: todoSlice,
+    cur: currencySlice,
   },
 });

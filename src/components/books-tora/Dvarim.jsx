@@ -5,12 +5,10 @@ const Dvarim = () => {
   return (
     <>
       <div className="book__fals">
-        <div className="book__fals-one">
-          DVARIM
-        </div>          
+        <div className="book__fals-one">DVARIM</div>
       </div>
     </>
   );
 };
 
-export default  Dvarim;
+export default Dvarim;

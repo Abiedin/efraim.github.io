@@ -21,3 +21,9 @@
 .button-up:active {
   background-color: rgb(97, 94, 233);
 }
+
+@media screen and (max-width: 550px) {
+  .button-up{
+    font-size: 32px;
+  }
+}

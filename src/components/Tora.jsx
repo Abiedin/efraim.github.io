@@ -12,18 +12,18 @@ const Tora = () => {
   return (
     <div className="book">
       <LinksChapter active={modalActive} setActive={setModalActive} />
-        <div className="book__name">
-          {name.name} | {name.chapter} | ГЛАВА {name.id_chapter}
-        </div>
-        {beresheet.map((items) => (
-          <div className="chapter" key={count++}>
-            <div className="chapter__ch">
-              <div className="chapter__number">{items.id}</div>
-              <div className="chapter__title">{items.verse}</div>
-            </div>
-            <div className="chapter__comment">{items.comment}</div>
+      <div className="book__name">
+        {name.name} | {name.chapter} | ГЛАВА {name.id_chapter}
+      </div>
+      {beresheet.map((items) => (
+        <div className="chapter" key={count++}>
+          <div className="chapter__ch">
+            <div className="chapter__number">{items.id}</div>
+            <div className="chapter__title">{items.verse}</div>
           </div>
-        ))}
+          <div className="chapter__comment">{items.comment}</div>
+        </div>
+      ))}
       <LinksChapter />
     </div>
   );

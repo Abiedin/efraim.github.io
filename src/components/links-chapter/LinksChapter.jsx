@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { objBereshit } from '../../object/bereshit/obj-bereshit';
 import './chapter-link.scss';
-import BackToTopButton from '../scroll-to-top-text/BackToUp';
 
 const LinksChapter = ({ active, setModalActive }) => {
   const arr = objBereshit?.map((items) => items.id_chapter);
