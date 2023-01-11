@@ -1,24 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../tora.scss';
 import { objBereshit } from '../../object/bereshit/obj-bereshit';
 import LinksChapter from '../links-chapter/LinksChapter';
+import { useSelector } from 'react-redux';
 
 const Beresheet = () => {
+  const [w, setW] = useState(window.innerWidth);
+  const sliceHeight = useSelector((state) => state.par.heightArr);
   let count = 1;
   const { id } = useParams();
   let arrBereshit = {};
 
   {
     id
-      ? (arrBereshit = objBereshit.filter(
-          (ret) => ret.id_chapter == id
-        ))
+      ? (arrBereshit = objBereshit.filter((ret) => ret.id_chapter == id))
       : (arrBereshit = objBereshit.filter((items) => items.id_chapter === 1));
   }
 
+  useEffect(() => {
+    const handleResize = () => {
+      setW(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <div className="book">
+    <div
+      className="book"
+      style={{
+        margin: sliceHeight >= 120 && w < 450 ? '0 10px' : '0 20px',
+      }}
+    >
       <LinksChapter />
       <div className="book__name">
         {arrBereshit[0].name} | {arrBereshit[0].chapter} | ГЛАВА{' '}

@@ -23,26 +23,3 @@ body {
     flex: 1;
     width: 100%;
 }
-
-.main__text {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.main__start {
-    width: 70%;
-}
-
-@media screen and (max-width: 1200px) {
-    .main {
-      width: 90%;
-    }
-  }
-
-@media screen and (max-width: 350px) {
-    .main {
-        width: 100%;
-    }
-
-  }

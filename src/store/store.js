@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import currencySlice from "../slices/currencySlice"
+import heightSlice from "../slices/heightSlice"
 
 export const store = configureStore({
   reducer: {
-    cur: currencySlice,
+    par: heightSlice,
   },
 });

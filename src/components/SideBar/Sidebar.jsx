@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
-import { FaTh, FaBars } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
+import { FaBars } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import './sidebar.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { showHeight } from '../../slices/heightSlice';
 
 const Sidebar = () => {
   const [isOpend, setIsOpend] = useState(false);
-  const toogle = () => setIsOpend(!isOpend);
+  const [scroll, setScroll] = useState(false);
+  const [h, setH] = useState(0);
+  const [w, setW] = useState(window.innerWidth);
+  const dispatch = useDispatch();
+  const sliceHeightHeader = useSelector((state) => state.par.heightHeader);
+  let scrollTop = 0;
 
   const menuItem = [
     {
@@ -35,43 +42,91 @@ const Sidebar = () => {
     },
   ];
 
-  /*const fabars = document.getElementById('fabars');
-  const sidebar = document.querySelector('.sidebar');
-  fabars.addEventListener('click', () => {
-    sidebar.style.display = 'none';
-    document.body.style.overflow = 'hidden';
-  });*/
+  const toogle = () => setIsOpend(!isOpend);
+
+  const close = () => {
+    if (isOpend) setIsOpend(!isOpend);
+  };
+
+  window.onscroll = function () {
+    scrollTop = window.pageYOffset
+      ? window.pageYOffset
+      : document.documentElement.scrollTop
+      ? document.documentElement.scrollTop
+      : document.body.scrollTop;
+
+    setH(scrollTop);
+
+    if (scrollTop >= 120) {
+      setScroll(true);
+      dispatch(showHeight(scrollTop));
+    } else {
+      setScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setW(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
-    <div style={{ width: isOpend ? '300px' : '50px' }} className="sidebar">
+    <div
+      style={{
+        width: w <= 450 && isOpend ? '100%' : '',
+        height: w <= 450 && isOpend ? '100%' : '',
+        position: w <= 450 ? 'fixed' : 'static',
+        top:
+          w <= 450 && sliceHeightHeader - h >= 0 ? sliceHeightHeader - h : '0px',
+      }}
+      className="sidebar"
+    >
       <div
-        style={{ paddingLeft: isOpend ? '-10px' : '10px' }}
-        className="favbar"
-        onClick={toogle}
+        
       >
-        <FaBars />
-      </div>
-      {menuItem.map((item, index) => (
-        <NavLink
-          to={item.path}
-          key={index}
-          className="sidebar-link"
+        <div
           style={{
-            paddingLeft: isOpend ? '40px' : '10px',
+            paddingLeft: isOpend ? '-10px' : '10px',
           }}
-          activeclassName="sidebar__active"
+          className="favbar"
+          onClick={toogle}
         >
-          <div className="sidebar-icon">
-            <img src={item.icon} className="sidebar-icon-img"></img>
-          </div>
-          <div
-            style={{ display: isOpend ? 'block' : 'none' }}
-            className="link-text"
-          >
-            {item.name}
-          </div>
-        </NavLink>
-      ))}
+          <FaBars />
+        </div>
+        <div
+          style={{
+            display: w <= 450 && !isOpend ? 'none' : 'block',
+          }}
+        >
+          {menuItem.map((item, index) => (
+            <NavLink
+              to={item.path}
+              key={index}
+              className="sidebar-link"
+              onClick={close}
+              activeclassName="sidebar__active"
+              style={{
+                paddingLeft: isOpend ? '40px' : '10px',
+              }}
+            >
+              <div className="sidebar-icon">
+                <img src={item.icon} className="sidebar-icon-img"></img>
+              </div>
+              <div
+                style={{ display: isOpend ? 'block' : 'none' }}
+                className="link-text"
+              >
+                {item.name}
+              </div>
+            </NavLink>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

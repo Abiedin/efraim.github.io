@@ -1,7 +1,5 @@
 .sidebar {
-  position: fixed;
   background-color: rgb(122, 115, 115);
-  transition: 0.4s;
 }
 
 .favbar {
@@ -26,7 +24,7 @@
   letter-spacing: 2px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   transition: 0.4s;
-
+  
   &:hover {
     background-color: rgb(129, 166, 214);
     color: rgb(21, 243, 169);
@@ -43,5 +41,5 @@
 }
 
 .link-text {
-  padding: 0 0 0 20px;
+  padding: 0 0 0 10px;
 }

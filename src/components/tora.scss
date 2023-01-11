@@ -71,15 +71,12 @@
     .book__name {
         margin: 0 0 15px 0;
         font-size: 20px;
+        color: gr;
     }
 }
 
 @media screen and (max-width: 350px) {
     .book {
-        margin: 0 25px;
-    }
-
-    .start__text {
-        text-align: center;
+        margin: 0 5px;
     }
 }
