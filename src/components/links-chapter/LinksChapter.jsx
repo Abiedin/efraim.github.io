@@ -19,10 +19,10 @@ const LinksChapter = ({ active, setModalActive }) => {
       behavior: 'auto', //smooth
     });
   };
-
+console.log(result)
   return (
     <div className="chapter-link">
-      {result?.map((item) => (
+      {result.map((item) => (
         <NavLink
           to={`/tora/beresheet/${item}`}
           key={item}

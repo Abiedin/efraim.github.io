@@ -1,8 +1,5 @@
 export  const objBereshit = [
   {
-    id: 0,
-  },
-  {
     name: 'БЕРЕШИТ',
     chapter: 'БЕРЕШИТ(В начале)',
     id_torach: 1,

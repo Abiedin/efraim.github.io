@@ -80,18 +80,22 @@ const Sidebar = () => {
       style={{
         width: w <= 450 && isOpend ? '100%' : '',
         height: w <= 450 && isOpend ? '100%' : '',
+        zIndex: w <= 450 && isOpend ? '1' : '0',
         position: w <= 450 ? 'fixed' : 'static',
+        background: w <= 450 && !isOpend ? 'transparent' : '',
         top:
-          w <= 450 && sliceHeightHeader - h >= 0 ? sliceHeightHeader - h : '0px',
+          w <= 450 && sliceHeightHeader - h >= 0
+            ? sliceHeightHeader - h
+            : '0px',
       }}
       className="sidebar"
     >
-      <div
-        
-      >
+      <div>
         <div
           style={{
             paddingLeft: isOpend ? '-10px' : '10px',
+            height: !isOpend ? '53px' : '',
+            color: w <= 450 && !isOpend ? 'black' : '',
           }}
           className="favbar"
           onClick={toogle}
@@ -111,7 +115,7 @@ const Sidebar = () => {
               onClick={close}
               activeclassName="sidebar__active"
               style={{
-                paddingLeft: isOpend ? '40px' : '10px',
+                padding:  w <= 450 && isOpend ? '20px 40px' : '20px 10px',
               }}
             >
               <div className="sidebar-icon">

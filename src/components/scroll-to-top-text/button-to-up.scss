@@ -1,8 +1,10 @@
+
+
 .button-up {
   text-align: center;
   position: fixed;
   bottom: 70px;
-  right: 50px;
+  right: 40px;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -10,20 +12,23 @@
   color: white;
   background-color: rgb(118, 175, 221);
   transition-duration:  0.4s;
-}
 
-.button-up:hover {
-  background-color: rgb(151, 201, 241);
-  color: rgb(250, 246, 32);
-  cursor: pointer;
-}
+  &:hover {
+    background-color: rgb(151, 201, 241);
+    color: rgb(250, 246, 32);
+    cursor: pointer;
+  }
 
-.button-up:active {
-  background-color: rgb(97, 94, 233);
+  &:active {
+    background-color: rgb(97, 94, 233);
+  }
 }
 
 @media screen and (max-width: 550px) {
   .button-up{
+    padding-top: 9px;
     font-size: 32px;
+    bottom: 30px;
+    right: 30px;
   }
 }
