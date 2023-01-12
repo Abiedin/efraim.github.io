@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header className="header"  id="header">
       <div className="header__box">
-        <div className="">
+        <div className="header__box__date">
           <div className="header__date-today-ru">
             {moment().format('ddd,  DD MMMM YYYY')}
           </div>

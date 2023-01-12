@@ -28,6 +28,8 @@ header {
     max-width: 55%;
 }
 
+
+
 .header__link {
     display: flex;
     flex: content;
@@ -123,6 +125,10 @@ header {
 }
 
 @media screen and (max-width: 520px) {
+    .header__box__date {
+        padding-top: 15px;
+    }
+
     .header__box {
         justify-content: center;
         align-items: center;
