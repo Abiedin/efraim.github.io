@@ -1,14 +1,23 @@
+:root {
+  --fontFamily: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+%bgColorActiveHover {
+  background-color: rgb(135, 147, 190);
+  color: rgb(253, 253, 253);
+}
+
 .chapter-link {
   display: table;
   text-align: center;
-  margin: 20px auto;
+  margin: 15px auto;
   padding: 20px 0;
   width: 70%;
 }
 
 .chapter-link-item {
   float: left;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: var(--fontFamily);
   text-align: center;
   font-size: 22px;
   height: 30px;
@@ -18,19 +27,17 @@
   color: rgb(18, 36, 141);
   margin: 0 10px;
   text-decoration: none;
+  transition: 0.4s; 
+
+  &.active {
+    @extend %bgColorActiveHover;
+  }
+
+  &:hover {
+   @extend %bgColorActiveHover;
+  }
 }
 
-.chapter-link-item.active {
-  border-radius: 50%;
-  background-color: rgb(135, 147, 190);
-  color: rgb(253, 253, 253);
-}
-
-.chapter-link-item:hover {
-  transition-duration: 0.4s;
-  color: white;
-  background-color: rgb(135, 147, 190);
-}
 
 @media screen and (max-width: 550px) {
   .chapter-link {
