@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../tora.scss';
-import { objBereshit } from '../../object/bereshit/obj-bereshit';
+import { objBeresheet } from '../../object/beresheet/obj-beresheet';
 import LinksChapter from '../links-chapter/LinksChapter';
 import { useSelector } from 'react-redux';
 
@@ -14,8 +14,8 @@ const Beresheet = () => {
 
   {
     id
-      ? (arrBereshit = objBereshit.filter((ret) => ret.id_chapter == id))
-      : (arrBereshit = objBereshit.filter((items) => items.id_chapter === 1));
+      ? (arrBereshit = objBeresheet.filter((ret) => ret.id_chapter == id))
+      : (arrBereshit = objBeresheet.filter((items) => items.id_chapter === 1));
   }
 
   useEffect(() => {

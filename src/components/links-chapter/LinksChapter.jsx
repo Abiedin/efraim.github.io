@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { objBereshit } from '../../object/bereshit/obj-bereshit';
+import { objBeresheet } from '../../object/beresheet/obj-beresheet';
 import './chapter-link.scss';
 
 const LinksChapter = ({ active, setModalActive }) => {
-  const arr = objBereshit?.map((items) => items.id_chapter);
+  const arr = objBeresheet?.map((items) => items.id_chapter);
   let result = [];
 
   for (let str of arr) {

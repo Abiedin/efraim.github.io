@@ -1,4 +1,4 @@
-export  const objBereshit = [
+export const objBeresheet = [
   {
     name: 'БЕРЕШИТ',
     chapter: 'БЕРЕШИТ(В начале)',

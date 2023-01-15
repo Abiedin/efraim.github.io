@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './header.scss';
 import moment from 'moment';
@@ -43,8 +43,9 @@ const Header = () => {
           href="https://t.me/+t9OAfLqYtDE2Zjcy"
           title="Telegram"
           target="_blank"
+          rel="noreferrer"
         >
-          <img src="/images/telegram.png" />
+          <img src="/images/telegram.png" alt="tora"/>
         </a>
       </div>
     </header>
