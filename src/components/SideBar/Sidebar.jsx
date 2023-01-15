@@ -77,7 +77,9 @@ const Sidebar = () => {
 
   return (
     <div
+      className="sidebar"
       style={{
+        //transition: '0.3s',
         width: w <= 450 && isOpend ? '100%' : '',
         height: w <= 450 && isOpend ? '100%' : '',
         zIndex: w <= 450 && isOpend ? '1' : '0',
@@ -88,13 +90,11 @@ const Sidebar = () => {
             ? sliceHeightHeader - h
             : '0px',
       }}
-      className="sidebar"
     >
       <div>
         <div
           style={{
-            paddingLeft: isOpend ? '-10px' : '10px',
-            height: !isOpend ? '53px' : '',
+            paddingLeft: isOpend ? '-10px' : '11px',
             color: w <= 450 && !isOpend ? 'black' : '',
           }}
           className="favbar"
@@ -105,6 +105,7 @@ const Sidebar = () => {
         <div
           style={{
             display: w <= 450 && !isOpend ? 'none' : 'block',
+           
           }}
         >
           {menuItem.map((item, index) => (
@@ -116,6 +117,7 @@ const Sidebar = () => {
               activeclassName="sidebar__active"
               style={{
                 padding:  w <= 450 && isOpend ? '20px 40px' : '20px 10px',
+                padding:  w >= 450 && isOpend ? '20px 40px 20px 25px' : '20px 10px',
               }}
             >
               <div className="sidebar-icon">
