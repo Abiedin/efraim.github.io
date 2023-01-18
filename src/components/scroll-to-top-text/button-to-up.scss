@@ -1,14 +1,14 @@
-
-
 .button-up {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   bottom: 70px;
   right: 40px;
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  font-size: 50px;
+  font-size: 30px;
   color: white;
   background-color: rgb(118, 175, 221);
   transition-duration:  0.4s;
@@ -26,8 +26,6 @@
 
 @media screen and (max-width: 550px) {
   .button-up{
-    padding-top: 5px;
-    font-size: 32px;
     bottom: 30px;
     right: 30px;
   }

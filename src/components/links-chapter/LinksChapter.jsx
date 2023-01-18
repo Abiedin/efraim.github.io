@@ -8,9 +8,7 @@ const LinksChapter = ({ active, setModalActive }) => {
   let result = [];
 
   for (let str of arr) {
-    if (!result.includes(str)) {
-      result.push(str);
-    }
+    if (!result.includes(str)) result.push(str);
   }
 
   const scrollUp = () => {
@@ -19,7 +17,7 @@ const LinksChapter = ({ active, setModalActive }) => {
       behavior: 'auto', //smooth
     });
   };
-console.log(result)
+
   return (
     <div className="chapter-link">
       {result.map((item) => (
