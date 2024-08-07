@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../tora.scss';
-import { objBeresheet } from '../../object/beresheet/obj-beresheet';
+import { objBeresheet } from '../../object/obj-books/obj-beresheet';
 import LinksChapter from '../links-chapter/LinksChapter';
 import { useSelector } from 'react-redux';
 
@@ -32,6 +32,7 @@ const Beresheet = () => {
     <div
       className="book"
       style={{
+        border: '2px solid black',
         margin: sliceHeight >= 120 && w < 450 ? '0 10px' : '0 20px',
       }}
     >

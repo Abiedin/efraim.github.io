@@ -17,6 +17,11 @@ const Sidebar = () => {
 
   const menuItem = [
     {
+      path: '/tora/nz',
+      name: 'NEW',
+      icon: '/images/sidebar/',
+    },
+    {
       path: '/tora/beresheet',
       name: 'BERESHEET',
       icon: '/images/sidebar/bereshit.png',

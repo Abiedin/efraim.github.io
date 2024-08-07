@@ -30,7 +30,7 @@ const Header = () => {
             {moment().format('ddd,  DD MMMM YYYY')}
           </div>
           <div className="header__date-today-is">
-            {date.date} {<Month month={date.month_name} />} {date.year}г.
+            {date.date} {<Month month={date.month_name} />} {date.year}.
           </div>
         </div>
         <NavLink to="/" className="header__logo">

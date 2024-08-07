@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { objBeresheet } from '../../object/beresheet/obj-beresheet';
+import { objBeresheet } from '../../object/obj-books/obj-beresheet';
 import './chapter-link.scss';
 
 const LinksChapter = ({ active, setModalActive }) => {
@@ -11,7 +11,7 @@ const LinksChapter = ({ active, setModalActive }) => {
     if (!result.includes(str)) result.push(str);
   }
 
-  const scrollUp = () => {
+  const scrollUp = () => {  
     window.scrollTo({
       top: 0,
       behavior: 'auto', //smooth

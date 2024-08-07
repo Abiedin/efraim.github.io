@@ -5,6 +5,10 @@ const heightSlice = createSlice({
   initialState: {
     heightArr: 0,
     heightHeader: 0,
+    steateSearch: '',
+    ArrSearch: [],
+    stIdBook: 0,
+    stIdChapter: 0,
   },
   reducers: {
     showHeight: (state, action) => {
@@ -13,9 +17,28 @@ const heightSlice = createSlice({
     showHeightHeader: (state, action) => {
       state.heightHeader = action.payload;
     },
+    showSearch: (state, action) => {
+      state.steateSearch = action.payload;
+    },
+    ArrSearchSteate: (state, action) => {
+      state.ArrSearch = action.payload;
+    },
+    stateIdBook: (state, action) => {
+      state.stIdBook = action.payload;
+    },
+    stateIdChapter: (state, action) => {
+      state.stIdChapter = action.payload;
+    },
   },
 });
 
-export const { showHeight, showHeightHeader } = heightSlice.actions;
+export const {
+  showHeight,
+  showHeightHeader,
+  showSearch,
+  ArrSearchSteate,
+  stateIdBook,
+  stateIdChapter,
+} = heightSlice.actions;
 
 export default heightSlice.reducer;
