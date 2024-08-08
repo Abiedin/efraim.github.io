@@ -2,7 +2,7 @@
   "name": "tora",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://abiedin.github.io -r https://github.com/Abiedin/Abiedin.github.io.git",
+  "homepage": "https://abiedin.github.io -r https://github.com/Abiedin/Abiedin.github.io.git/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
