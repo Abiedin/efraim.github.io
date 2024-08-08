@@ -2,7 +2,7 @@
   "name": "tora",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://abiedin.github.io/",
+  "homepage": "https://abiedin.github.io -r https://github.com/Abiedin/Abiedin.github.io.git",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -42,6 +42,7 @@
     "eject": "react-scripts eject",
     "predeploy": "react-scripts build",
     "deploy": "gh-pages -d build"
+               
   },
   "eslintConfig": {
     "extends": [
