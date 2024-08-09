@@ -9,25 +9,10 @@ const ShowItem = () => {
   const location = useLocation();
   let nowArr = [];
 
-
-
+  
 
   return (
-    <div className="show-num">
-      <div className="show-name-chapter">
-        {nowArr[0].name} | {nowArr[0].chapter} {nowArr[0].id_chapter}
-      </div>
-      {nowArr.map((item, index) => (
-        <div className="show-items" key={index} id={item.poemNumber}>
-          <div className="show-number">
-            <div className="">{item.id_chapter}</div>
-            <div>:</div>
-            <div className="">{item.poemNumber}</div>
-          </div>
-          <div className="chxcva">{item.verse}</div>
-        </div>
-      ))}
-    </div>
+   
   );
 };
 

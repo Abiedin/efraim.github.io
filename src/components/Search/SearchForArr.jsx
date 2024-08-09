@@ -8,9 +8,8 @@ const SearchArr = () => {
   const dispatch = useDispatch();
   let steateWord = useSelector((state) => state.par.steateSearch);
   const data = JSON.parse(localStorage.getItem('tanahArr')).reverse();
-chSteate(handleSearch()));
-    }
-  }, [steateWord]);
+
+  
 };
 
 export default SearchArr;

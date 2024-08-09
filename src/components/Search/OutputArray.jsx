@@ -19,23 +19,8 @@ const Out = () => {
 
   if (steateWord && steateWord.length >= 2) {
     return (
-    
-              className="search-box"
-              onClick={() => {
-                dispatch(stateIdBook(items.id_book));
-                dispatch(stateIdChapter(items.id_chapter));
-              }}
-            >
-              <div className="search-chapter">
-                <div className="">{items.chapter}</div>
-                <div className="">{items.id_chapter}</div>
-                <div>:</div>
-                <div className="">{items.poemNumber}</div>
-              </div>
-              <div className="">{items.verse}</div>
-            </div>
-          </NavLink>
-        ))}
+      <OutStyle>
+       
       </OutStyle>
     );
   }
