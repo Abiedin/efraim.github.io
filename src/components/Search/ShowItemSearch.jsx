@@ -9,21 +9,8 @@ const ShowItem = () => {
   const location = useLocation();
   let nowArr = [];
 
-  useEffect(() => {
-    // Scroll to the hash element
-    if (location.hash) {
-      const element = document.getElementById(location.hash.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: 'auto' });
-      }
-    }
-  }, [location]);
 
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].id_book === sIdBoo && data[i].id_chapter === sIdChap) {
-      nowArr.push(data[i]);
-    }
-  }
+
 
   return (
     <div className="show-num">

@@ -19,14 +19,7 @@ const Out = () => {
 
   if (steateWord && steateWord.length >= 2) {
     return (
-      <OutStyle>
-        {steateArrSearch.map((items, index) => (
-          <NavLink
-            to={`/tora/showitem#${items.poemNumber}`}
-            className="search"
-            key={index}
-          >
-            <div
+    
               className="search-box"
               onClick={() => {
                 dispatch(stateIdBook(items.id_book));
